@@ -1,6 +1,6 @@
 import './App.css';
 import React from 'react';
-import { BrowserRouter, Route, Routes} from "react-router-dom";
+// import { BrowserRouter, Route, Routes} from "react-router-dom";
 // import { ReactDOM } from 'react';
 import Navbar from './components/Navbar';
 import Accordion from './components/Accordion';
@@ -35,16 +35,17 @@ function App() {
   }
   return (
     <>
-    <BrowserRouter>
+    {/* <BrowserRouter> */}
     <Navbar title='Text Utils' about='About' mode={mode} toggleMode={toggleMode}/>
     <Alert alert={alert}/>
-    <Routes>
-        <Route path="/" element={<Forms heading="Analyze text here" mode={mode} showAlertProp={showAlert}></Forms>}/>
-    </Routes>
-    <Routes>
+    {/* <Routes> */}
+    <Forms heading="Analyze text here" mode={mode} showAlertProp={showAlert}></Forms>
+        {/* <Route path="/" element={<Forms heading="Analyze text here" mode={mode} showAlertProp={showAlert}></Forms>}/> */}
+    {/* </Routes> */}
+    {/* <Routes>
       <Route path="/about" element={<Accordion/>}/>
-      </Routes>
-    </BrowserRouter>
+      </Routes> */}
+    {/* </BrowserRouter> */}
     </>
   );
 }
